@@ -4,7 +4,8 @@
   "description": "",
   "main": "beyonder.js",
   "scripts": {
-    "dev": "nodemon Beyonder.js"
+    "start": "node Beyonder.js",
+    "server": "nodemon BeyonderAlive.js"
   },
   "author": "Aurora",
   "license": "ISC",
