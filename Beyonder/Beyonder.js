@@ -2,6 +2,8 @@ console.clear();
 
 const Discord = require("discord.js");
 require('dotenv').config
+const keepAlive = require('./BeyonderAlive.js');
+keepAlive();
 
 // Require the necessary discord.js classes
 const { Client, Collection, Intents } = require('discord.js');
