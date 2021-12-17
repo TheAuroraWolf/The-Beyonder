@@ -1,6 +1,4 @@
-const {
-	prefix
-} = require('../config.json')
+require('dotenv').config();
 
 module.exports = {
 	name: "messageCreate",
@@ -10,7 +8,7 @@ module.exports = {
 		if (message.author.bot || !message.guild) return
 		
 		const [cmd, ...args] = message.content
-			.slice(prefix.length)
+			.slice(process.env.prefix.length)
 			.trim()
 			.split(" ");
 

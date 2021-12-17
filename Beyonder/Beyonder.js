@@ -1,6 +1,7 @@
 console.clear();
 
 const Discord = require("discord.js");
+require('dotenv').config
 
 // Require the necessary discord.js classes
 const { Client, Collection, Intents } = require('discord.js');
@@ -11,8 +12,6 @@ const allIntents = new Intents(32767);
 const beyond = new Client({ intents: allIntents });
 
 module.exports =  beyond;
-
-const { token } = require('./config');
 
 const fs = require('fs');
 
@@ -42,5 +41,5 @@ for (const file of Abilities) {
 }
 
 // Login to Discord with your client's token
-beyond.login(token);
+beyond.login(process.env.token);
 
